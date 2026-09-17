@@ -1,1 +1,29 @@
+# macOS
 .DS_Store
+
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Postman local data
+.postman/
+
+# Pair / Group repositories
+week3/week3-Pair-Programming-Part-2/
+week3/week3-fe-pair-programming/
+
+week4/Group4-cm1/
+week4/collaborative-project/
+week4/week4-demo/
+week4/week4-fe-pp/
+week4/week4-pair-programming/
+
+week5/Migrant-Hub-Sprint-2/
+week5/fe-useeffect-demo/
+week5/week5-be-pp/
+week5/week5-fepp-starter/
+week5/week5-wed-activity1/
