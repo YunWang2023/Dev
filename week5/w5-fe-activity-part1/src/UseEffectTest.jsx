@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 const UseEffectTest = () => {
   const [toggleOne, setToggleOne] = useState(false);
   const [toggleTwo, setToggleTwo] = useState(false);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     console.log('UseEffect1 Ran');
@@ -17,15 +18,18 @@ const UseEffectTest = () => {
   }, [toggleTwo]);
 
   useEffect(() => {
+    console.log(`UseEffect3 with interval number ${count} is running`);
+
     const interval = setInterval(() => {
-      console.log('Interval is running');
+      console.log(`setInterval number ${count} is running`);
     }, 1000);
 
     return () => {
       clearInterval(interval);
-      console.log('Interval is cleared');
+      console.log('UseEffect3 cleanup ran.');
+      console.log(`setInterval number ${count} is being cleared out`);
     };
-  }, []);
+  }, [count]);
 
   return (
     <div>
@@ -39,6 +43,10 @@ const UseEffectTest = () => {
 
       <button onClick={() => setToggleTwo(!toggleTwo)}>
         ToggleTwo
+      </button>
+
+      <button onClick={() => setCount(count + 1)}>
+        Count: {count}
       </button>
     </div>
   );
