@@ -1,0 +1,8 @@
+$kind: http-request
+name: GET-posts-limit-2
+description: ""
+url: http://localhost:4000/api/posts?limit=2
+method: GET
+queryParams:
+  limit: "2"
+order: 4207683760859777

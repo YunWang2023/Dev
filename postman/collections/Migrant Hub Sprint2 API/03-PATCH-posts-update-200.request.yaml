@@ -1,0 +1,15 @@
+$kind: http-request
+name: 03-PATCH-posts-update-200
+description: ""
+url: http://localhost:4000/api/posts/6aabca865f6587965e8ee1bb
+method: PATCH
+body:
+  type: json
+  content: |-
+    {
+        "title": "esting My Post API - Updated",
+        "body": "This is a test post for Sprint 2.",
+        "author": "Yun Wang",
+        "category": "Study"
+    }
+order: 4491248606536780

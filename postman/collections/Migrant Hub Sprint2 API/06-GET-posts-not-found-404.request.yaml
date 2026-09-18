@@ -1,0 +1,6 @@
+$kind: http-request
+name: 06-GET-posts-not-found-404
+description: ""
+url: http://localhost:4000/api/posts/010203040506070809000000
+method: GET
+order: 4503448743220222

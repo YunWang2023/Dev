@@ -1,0 +1,6 @@
+$kind: http-request
+name: 01-GET-posts-200
+description: ""
+url: http://localhost:4000/api/posts
+method: GET
+order: 1789642794381

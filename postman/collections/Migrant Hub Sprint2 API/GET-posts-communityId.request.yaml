@@ -1,0 +1,8 @@
+$kind: http-request
+name: GET-posts-communityId
+description: ""
+url: http://localhost:4000/api/posts?communityId=6aaa492cc20f934a92e2da29
+method: GET
+queryParams:
+  communityId: 6aaa492cc20f934a92e2da29
+order: 4480026735952093

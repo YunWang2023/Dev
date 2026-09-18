@@ -1,0 +1,15 @@
+$kind: http-request
+name: 02-POST-posts-201
+description: ""
+url: http://localhost:4000/api/posts
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "title": "Testing My Post API",
+      "body": "This is a test post for Sprint 2.",
+      "author": "Yun Wang",
+      "category": "Study"
+    }
+order: 4486468246498653

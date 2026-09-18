@@ -1,0 +1,8 @@
+$kind: http-request
+name: GET-posts-category-Housing
+description: ""
+url: http://localhost:4000/api/posts?category=Housing
+method: GET
+queryParams:
+  category: Housing
+order: 4353612258712543
