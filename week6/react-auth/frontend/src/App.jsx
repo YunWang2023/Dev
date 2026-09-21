@@ -1,14 +1,20 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useState } from "react";
-import SignupComponent from "./pages/SignupComponent";
-import LoginComponent from "./pages/LoginComponent";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
 
+  import { useState } from "react";
+  import SignupComponent from "./pages/SignupComponent";
+  import LoginComponent from "./pages/LoginComponent";
+  import Home from "./pages/Home";
+  import Profile from "./pages/Profile";
+  import Navbar from "./components/Navbar";
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    JSON.parse(localStorage.getItem("user")) || false
-  );
+
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    return user && user.token ? true : false;
+  });
+
+
+
   return (
     <>
       <BrowserRouter>
@@ -42,12 +48,22 @@ function App() {
                 )
               }
             />
+            <Route
+              path="/profile"
+              element={
+                isAuthenticated ? (
+                  <Profile />
+                ) : (
+                  <Navigate to="/login" />
+                )
+              }
+            />
           </Routes>
         </div>
       </BrowserRouter>
     </>
   );
-}
 
+}
 export default App;
 
